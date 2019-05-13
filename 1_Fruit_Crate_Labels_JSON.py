@@ -1,3 +1,5 @@
+""" code written by G. Milliken, reusable under MIT license""" 
+
 #This python script scrapes the Produce Crate Labels from the Digital Commonweath: Massachusetts Collection Online
 #This is the first script in the program; it needs to be ran first. The json it produces will with used by script titled 2_Fruit_Crate_Labels_Image_Download.py
 
