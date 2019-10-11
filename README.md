@@ -1,8 +1,13 @@
-There are two python scripts in this repository: 
+Scraping [Fruit Crate Labels](https://www.digitalcommonwealth.org/search?f%5Bgenre_specific_ssim%5D%5B%5D=Fruit+Crate+Labels) from the Digital Commonwealth: Massachusetts Collection Online
 
-(1) 1_Fruit_Crate_Labels_JSON.py - This python script scrapes the Produce Crate Labels from the Digital Commonweath: Massachusetts Collection Online. This is the first script in the program; it needs to be ran first. The json it produces will with used by the second script. 
 
-(2) 2_Fruit_Crate_Labels_Image_Download.py - This python script downloads images from the Digital Commonweath: Massachusetts Collection Online's Produce Crate Labels Collection. This is the second script in the program; it needs to be ran second. It uses the JSON produced by script 1. An empty folder titled Images need to be created in your directory before running; this is where the images will be downloaded to. The label titles are used as the file names for each image, a tool such as NameChanger (https://mrrsoftware.com/namechanger/) could be used to rename the image files as necessary.
+#About 
+These python scripts were written as part of a digital humanities course taken at Pratt Institute. They were designed to help a fellow student with her project centered on image analysis. Check out that project [here](http://studentwork.prattsi.org/dh/analyzing-produce-crate-label-images-via-python-and-imagej)
 
-These scripts were created as part of Charlotte Eagle's project at Pratt Institute. Check out Charlotte Eagle's use of this code and her work with ImageJ here: 
-http://studentwork.prattsi.org/dh/analyzing-produce-crate-label-images-via-python-and-imagej 
+
+#How to use this repository 
+There are two scripts in this repo: The first script, 1_Fruit_Crate_Labels_JSON.py, scrapes the URL for each digital item, the image caption, and the image URL. This information is written to JSON and that JSON is used by the second script, 2_Fruit_Crate_Labels_Image_Download.py, to download the images locally. Before running the second script, an empty folder titled "Images" need to be created in your directory; this is where the images will be downloaded to. The label titles are used as the file names for each image; however, a tool such as NameChanger (https://mrrsoftware.com/namechanger/) could be used to rename the image files as necessary.
+
+Any questions can be directed to genevieve[dot]milliken[at]gmail[dot]com
+
+![Fruit Crate Label](Fruit_Label_Redlands_Foothill_Brand.jpg)
