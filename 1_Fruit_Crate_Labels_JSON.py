@@ -1,14 +1,13 @@
-""" code written by G. Milliken, reusable under MIT license""" 
-
 #This python script scrapes the Produce Crate Labels from the Digital Commonweath: Massachusetts Collection Online
-#This is the first script in the program; it needs to be ran first. The json it produces will with used by script titled 2_Fruit_Crate_Labels_Image_Download.py
+#This is the first script in the program; it needs to be ran first. 
+# The json it produces will with used by script titled 2_Fruit_Crate_Labels_Image_Download.py
 
-#import modules needed for this script
+#import modules
 from bs4 import BeautifulSoup
 import requests
 import json
 
-#create an empty list to hold data
+#create an empty list
 all_my_data = []
 
 #create for loop that will paginate through multiple pages
@@ -19,10 +18,10 @@ for pages in range(0,3):
 	page_html = results_page.text
 	soup = BeautifulSoup(page_html, "html.parser")
 
-	#find div that hold the metadata needed
+	#find div that hold desired metadata
 	all_labels = soup.find_all("div", attrs = {'class': 'document'})
 
-	#create a forloop and data dictionary 
+	#create a for loop and data dictionary 
 	for items in all_labels:
 
 		my_data = {
@@ -64,7 +63,7 @@ for pages in range(0,3):
 			# print(link['src'])
 			my_data["image url"] = link['src']
 
-		#append data so it is all together
+		#append data
 		all_my_data.append(my_data)
 
 # print(all_my_data)
