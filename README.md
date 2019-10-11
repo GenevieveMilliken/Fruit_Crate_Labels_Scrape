@@ -3,7 +3,7 @@
 
 ### About
 
-These python scripts were written as part of a digital humanities course taken at Pratt Institute. They were designed to help a fellow student with her project centered on image analysis. Check out that project [here](http://studentwork.prattsi.org/dh/analyzing-produce-crate-label-images-via-python-and-imagej)
+These python scripts were written as part of a digital humanities course taken at Pratt Institute. They were designed to help a fellow student with her project centered on image analysis. Check out that project [here](http://studentwork.prattsi.org/dh/analyzing-produce-crate-label-images-via-python-and-imagej).
 
 
 ### How to use this repository
