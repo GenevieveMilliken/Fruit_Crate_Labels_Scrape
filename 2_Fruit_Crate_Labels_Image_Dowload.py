@@ -1,11 +1,7 @@
-""" code written by G. Milliken, reusable under MIT license""" 
-
 #This python script downloads images from the Digital Commonweath: Massachusetts Collection Online's Produce Crate Labels Collection
 #This is the second script in the program; it needs to be ran second. It uses the JSON produced by the script titled 1_Fruit_Crate_Labels_JSON.py
 #An empty folder titled Images need to be created in your directory before running; this is where the images will be downloaded to
-#the label titles are used as the file names, a tool such as NameChanger (https://mrrsoftware.com/namechanger/) could be used to rename as necessary
 
-#import module needed for this script
 import json
 import urllib.request
 
