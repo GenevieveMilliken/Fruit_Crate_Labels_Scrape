@@ -1,5 +1,3 @@
-""" code written by G. Milliken, reusable under MIT license""" 
-
 #This python script downloads images from the Digital Commonweath: Massachusetts Collection Online's Produce Crate Labels Collection
 #This is the second script in the program; it needs to be ran second. It uses the JSON produced by the script titled 1_Fruit_Crate_Labels_JSON.py
 #An empty folder titled Images need to be created in your directory before running; this is where the images will be downloaded to
@@ -14,12 +12,18 @@ def download_image(url, file_path, caption):
 	try:
 		urllib.request.urlretrieve(url, full_path)
 	except FileNotFoundError:
-		pass
+		# pass
+		print("wahhh")
 
-# open json file, extract information, write images to file
-with open('fruit_crate_labels.json') as f_object:
-	text = json.load(f_object)
-	for data_dict in text:
-		caption = data_dict['caption']
-		url = data_dict['image url']
-		download_image(url, "Images/", caption)
+# # open json file, extract information, write images to file
+# with open('fruit_crate_labels.json') as f_object:
+# 	text = json.load(f_object)
+# 	for data_dict in text:
+# 		caption = data_dict['caption']
+# 		url = data_dict['image url']
+# 		download_image(url, "Images/", caption)
+
+url = "https://fedora.digitalcommonwealth.org/fedora/objects/commonwealth:b2774428c/datastreams/access800/content"
+file_path = ":/Users/genevievemilliken/Desktop/Fruit_Crate_Labels_Scrape/"
+caption = "test"
+download_image(url, file_path, caption)
